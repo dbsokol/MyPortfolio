@@ -1,30 +1,60 @@
-<!DOCTYPE html>
-<!-- iCardio.ai -->
-<html style="height:100%;overscroll-behavior: none;">
+{% extends 'base.html' %}
+{% load static %}
 
-<head>
-    
-    {% load static %}
-    <title>iCardio.ai</title>
-    <link rel="icon" type="image/png" href="{% static '../static/images/favicon-32x32.png' %}" />
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="{% static '../static/css/materialize.css' %}"  media="screen,projection" />
-    <!--Import app.css-->
-    <link type="text/css" rel="stylesheet" href="{% static '../static/css/app.css' %}" media="screen,projection" />
-    <!--Import filepond.css-->
-    <link type="text/css" rel="stylesheet" href="{% static '../static/css/filepond.css' %}" media="screen,projection" />
-    <!--Import tippy.css for demo tips-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tippy.js/0.3.0/tippy.css" />
-    <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    {% block extra_css %}{% endblock %}
-    
-</head>
+<!---->
+<!-- body: -->
+<!---->
+{% block body %}
 
-{% block content %}
-{{test}}
+<!-- projects -->
+<div id='projects' class='section_container'>
+  <div id='projects--image' class='outer_left_column'>
+    <img id='portfolio--image' src="{% static '/portfolio.jpg' %}" alt="sailboat">
+  </div>
+  <div id='projects--text' class='outer_right_column'>
+    <h1 id='projects--text-header' class='text-section-header'> Engineering </h1>
+    <h3>
+      <a id='projects--text-details--icardio-title' href='https://icardio.ai/'> iCardio.ai </a>
+    </h3>
+    <ul id='projects--text-details--icardio-line-1'> ❤️ Leveraging artifical intelligence to analyze echocardiograms. </ul> 
+    <br>
+    <h3>
+      <a id='projects--text-details--airplant-title' href='https://airplant.garden/'> airplant.garden </a>
+    </h3>
+    <ul id='projects--text-details--airplant-line-1'> 🌿 No soil. No pots. Just air. </ul>
+    <ul id='projects--text-details--airplant-line-2'> 🌎 Delivering an airplant to your door every month. </ul>
+    <ul id='projects--text-details--airplant-line-3'> ♻️ 100% biodegradable packaging. </ul>
+    <ul id='projects--text-details--airplant-line-4'> 🌱 Grown in California, raised by you. </ul>
+  </div>
+</div>
+
+<!-- artwork -->
+<div id='artwork' class='section_container'>
+  <div id='artwork--text' class='outer_left_column'>
+    <h1 id='artwork--text-header' class='text-section-header'> Artwork </h1>
+    <p>text goes here</p>
+  </div>
+  <div id='artwork--image' class='outer_right_column'>
+    <img src="{% static '/venice.jpg' %}" alt="venice">
+  </div>
+</div>
+
+<!-- contact information -->
+<div id='contact' class='section_container'>
+  <div id='contact--image' class='outer_left_column'>
+    <img src="{% static '/lighthouse.jpg' %}" alt="lighthouse">
+  </div>
+  <div id='contact--text' class='outer_right_column'>
+    <h1 id='contact--text-header' class='text-section-header'> Contact </h1>
+    <p> Phone: 310 435 5914 </p>
+    <p> Email: messageme@danielbsokol.engineer </p>
+  </div>
+</div>
+
+
+<!---->
+<!-- load scripts: -->
+<!---->
+<script src="{% static '/js/portfolio.js' %}"></script>
+
 {% endblock %}
-
-</html>

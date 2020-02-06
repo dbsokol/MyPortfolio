@@ -1,0 +1,16 @@
+body {
+  color: #CDDAD1;
+  background: linear-gradient(to left top, #06133C, #061000) fixed;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+img {
+  max-width:100%;
+  max-height:100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+#portfolio--image {
+  border-radius: 150px;
+}
