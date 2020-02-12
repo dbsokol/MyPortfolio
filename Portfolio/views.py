@@ -1,12 +1,18 @@
+from django.http import HttpResponse
 from django.shortcuts import render
+import json
 
-# Create your views here.
+
 def LoadPortfolio(request):
     
-    print('hello i am in here')
-    
-    context = {
-        'test' : 'this is a test2 test3',
-    }
+    context = {'status': 0}
     
     return render(request, 'portfolio.html', context=context)
+    
+    
+
+def TestHTML(request):
+
+    context = {'status': 0}
+
+    return render(request, 'test.html', context=context) 
