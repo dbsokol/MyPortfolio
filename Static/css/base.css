@@ -1,29 +1,21 @@
-body {
-  color: #CDDAD1;
-  background: linear-gradient(to left top, #06133C, #061000) fixed;
-  font-family: 'Ubuntu', sans-serif;
+html {
+	scroll-behavior: smooth;
+	background: linear-gradient(to left top, #06133C, #061000) fixed;
 }
 
-/*img {*/
-/*  max-width:70%;*/
-/*  max-height:70%;*/
-/*  height: auto;*/
-/*  padding: 50px;*/
-/*  border-radius: 15px;*/
-/*}*/
-
 .parallax {
-  /* The image used */
-  background-image: url('/static/milky-way.jpg');
+  width: 100%;
+}
 
-  /* Set a specific height */
-
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-style:none;
-  margin: -20px;
-  padding: -10px;
+body {
+  color: #CDDAD1;
+  font-family: 'Ubuntu', sans-serif;
+  margin: 0px;
+  
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }

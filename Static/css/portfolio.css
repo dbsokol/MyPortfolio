@@ -9,7 +9,8 @@
 .column {
   float: left;
   width: 50%;
-  padding: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .row:after {
@@ -19,7 +20,8 @@
 }
 
 .row {
-  padding: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 #navbar {
@@ -27,62 +29,64 @@
   padding: 10px;
   position: fixed;
   bottom: 0;
-  margin-left: 20px;
+  margin-left: 40px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .navbar--link {
-  margin: 20px;
-  padding: 5px;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 .navbar--link:hover {
   color: #4d0000;
   background-color: #CDDAD1;
-  border-radius: 5px;
-  padding: 5px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 7px;
+  padding-bottom: 10px;
   font: bold;
-}
-
-#projects, #contact {
-  margin: 20px;
+  transition: 0.3s;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
 }
 
 #artwork--container {
   background-color: black;
-  margin: 20px;
   padding: 35px;
   border-radius: 15px;
   height: 670px;
 }
 
-#projects--text, #contact--text, #credentials--text {
+
+#artwork {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.subcolumn {
   background-color: black;
   padding: 35px;
   border-radius: 25px;
-  display: inline-block;
+  width: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
-#credentials--text {
-  width: 47.5%;
-  margin-left: 0px;
-  margin-right: 20px;
+#portfolio--image-container {
+  background: none !important;
 }
-
-#contact--text {
-  width: 47.5%;
-  margin-left: 20px;
-  margin-right: 0px;
-  float: right;
-}
-
 
 #portfolio--image {
   max-width:70%;
   max-height:70%;
   height: auto;
-  padding: 50px;
+  padding: 10px;
   border-radius: 200px;
   margin: auto;
+  background-color: #4d0000;
 }
 
 #artwork--image {
@@ -92,12 +96,21 @@
   margin: auto;
 }
 
-.artwork--image--inner {
-  background-color: #4d0000;
+.artwork--image--inner-1 {
+  background-image: linear-gradient(to right, #4d0000, #330000);
+  border-top: 15px solid #4d0000;
+  border-left: 15px solid #4d0000;
+  border-bottom: 15px solid #390000;
+  border-right: 15px solid #330000;
+}
+
+.artwork--image--inner-2 {
+  background-color: #404040;
   max-width:100%;
   max-height:100%;
   height: auto;
-  padding: 10px;
+  padding: 12px;
+  /*border: 10px solid #4d0000;*/
   border-radius: 15px;
   margin: auto;
 }
@@ -129,17 +142,32 @@ ul {
   font-size: smaller;
 }
 
+p {
+  font-size: 13px;
+  text-indent: 15px;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
 a {
   color: inherit;
   text-decoration: inherit; 
 }
 
-a:hover {
+.external_link:hover {
   color: #4d0000;
   background-color: #CDDAD1;
   border-radius: 5px;
   padding: 5px;
   font: bold;
+  transition: 0.3s;
+}
+
+#projects--icardio-title:hover, #projects--intelsat-title:hover, #projects--airplant-title:hover {
+  padding-top:52px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  transition: 0.2s;
 }
 
 #portfolio--image {
