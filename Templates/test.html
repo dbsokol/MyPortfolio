@@ -1,7 +1,4 @@
 test
+{% load static %}
 
- {% for list in lists %}
-          <p>{{list.companyname}}</p>
-          <p>{{list.loyalty}}</p>
-          <p>{{list.howtohire}}</p>
-      {% endfor %}
+<img id='portfolio--image' src="{% static '/portfolio.jpg' %}" alt="portfolio">

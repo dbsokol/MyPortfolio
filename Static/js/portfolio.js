@@ -69,7 +69,7 @@ function ExecuteTypwriter(activate) {
         projects__text_header : 'projects--text-header', 
         artwork__text_header : 'artwork--text-header',
         contact__text_header : 'contact--text-header',
-        projects__credentials_header : 'projects--credentials-header',
+        projects__credentials_header : 'credentials--text-header',
     };
     
     // create input objects:

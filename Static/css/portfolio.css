@@ -50,6 +50,7 @@
   transition: 0.3s;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
+  opacity: .9;
 }
 
 #artwork--container {
@@ -138,7 +139,7 @@ ul {
   text-align: left;
   padding: 0;
   list-style-type: none;
-  margin-top: -10px;
+  /*margin-top: -10px;*/
   font-size: smaller;
 }
 
@@ -154,20 +155,41 @@ a {
   text-decoration: inherit; 
 }
 
-.external_link:hover {
-  color: #4d0000;
-  background-color: #CDDAD1;
-  border-radius: 5px;
+/*.external_link:hover {*/
+/*  color: #4d0000;*/
+/*  background-color: #CDDAD1;*/
+/*  border-radius: 5px;*/
+/*  padding: 5px;*/
+/*  font: bold;*/
+/*  transition: 0.3s;*/
+/*  opacity: .9;*/
+/*}*/
+
+.external_link, #projects--icardio-title, #projects--intelsat-title, #projects--airplant-title {
+  position: relative;
+  border-style: solid;
+  border-width: 0px 1px 0px 1px;
+  border-color: #94A99B;
+  box-shadow: 0 6px #7F9586;
+  border-radius: 15px;
   padding: 5px;
   font: bold;
-  transition: 0.3s;
+  margin-bottom: 25px;
+  background-color: #CDDAD1;
+  color: #4d0000;
+  z-index:20 !important;
 }
 
-#projects--icardio-title:hover, #projects--intelsat-title:hover, #projects--airplant-title:hover {
-  padding-top:52px;
-  border-top-left-radius: 0px;
-  border-top-right-radius: 0px;
-  transition: 0.2s;
+.external_link:hover, #projects--icardio-title:hover, #projects--intelsat-title:hover, #projects--airplant-title:hover {
+  position: relative;
+  top: 3px;
+  padding: 5px;
+  border-radius: 15px;
+  background-color: #CDDAD1;
+  border-color: #94A99B;
+  box-shadow: 0 3px #7F9586;
+  transition: 0s !important;
+  z-index:1 !important;
 }
 
 #portfolio--image {
@@ -203,4 +225,39 @@ button {
 
 li {
 	margin: 0 0.25rem;
+}
+
+
+.title-outer-container {
+  background: transparent;
+  border-style: solid;
+  border-width: 20px 20px 20px 20px; 
+  border-color: black;
+  border-radius: 40px;
+  padding: 0px;
+  margin-top: 20px;
+}
+
+.title-inner-container {
+  background: transparent;
+  border-style: solid;
+  border-width: 5px 5px 5px 5px; 
+  border-color: black;
+  border-radius: 15px;
+  padding: 0px;
+}
+
+#projects--text-header, #credentials--text-header, #contact--text-header, #artwork--text-header{
+  margin: 5px;
+  border-style: solid;
+  border-width: 6px; 
+  border-color: #350000;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+
+
+#artwork--container {
+  
 }

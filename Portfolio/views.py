@@ -10,6 +10,13 @@ def LoadPortfolio(request):
     return render(request, 'portfolio.html', context=context)
     
     
+    
+def Render404(request, exception):
+    
+    context = {'status' : 404}
+    
+    return render(request, '404.html', context=context)
+    
 
 def TestHTML(request):
 
