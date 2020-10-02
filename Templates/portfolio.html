@@ -1,9 +1,17 @@
 {% extends 'base.html' %}
 {% load static %}
 
-<!---->
+
+<!-- head -->
+{% block head %}
+
+<script src="{% static '/js/portfolio.js' %}"></script>
+<link type="text/css" rel="stylesheet" href="{% static '/css/portfolio.css' %}" />
+
+{% endblock %}
+
+
 <!-- body: -->
-<!---->
 {% block body %}
 
 <!-- projects -->
@@ -153,15 +161,13 @@
 
 
 
-<!-- load scripts: -->
-<script src="{% static '/js/portfolio.js' %}"></script>
-
 <footer>
   <div id='navbar' >
     <a class='navbar--link' href='#projects'> Engineering </a> 
     <a class='navbar--link' href='#artwork'> Artwork </a>
     <a class='navbar--link' href='#contact'> Education </a>
     <a class='navbar--link' href='#contact'> Contact </a>
+    <a class='navbar--link' href='https://danielbsokol.engineer/visitors'> Visitors </a>
   </div>
 </footer>
 

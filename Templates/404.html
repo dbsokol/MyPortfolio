@@ -1,11 +1,27 @@
 {% extends 'base.html' %}
 {% load static %}
 
-<!---->
+
 <!-- body: -->
-<!---->
 {% block body %}
 
-404!
+<div id='div-404'> 
+    <h1 id='h1-404'> 404! </h1> 
+</div>
+
+<!-- footer -->
+<footer>
+  <div id='navbar' >
+    <a class='navbar--link' href='https://danielbsokol.engineer'> Home </a> 
+  </div>
+</footer>
+
+<!-- parallax script -->
+<script>
+  /* global $ */
+  $('.parallax').parallax({imageSrc: '{% static "/galaxy3.jpg" %}'});
+</script>
 
 {% endblock %}
+
+

@@ -1,6 +1,10 @@
 from django.shortcuts import render
+from Tools import tools
 
-# Create your views here.
+
+@tools.monitor_me()
 def RenderTasksPage(request):
     
-    pass
+    context = {'status' : 0}
+    
+    return render(request, 'tasks.html', context=context)

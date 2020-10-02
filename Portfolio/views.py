@@ -1,8 +1,9 @@
-from django.http import HttpResponse
 from django.shortcuts import render
-import json
+from Tools import tools
 
 
+
+@tools.monitor_me()
 def LoadPortfolio(request):
     
     context = {'status': 0}
@@ -11,15 +12,18 @@ def LoadPortfolio(request):
     
     
     
-def Render404(request, exception):
+@tools.monitor_me()    
+def RenderICardioAi(request):
     
-    context = {'status' : 404}
+    context = {'status': 0}
     
-    return render(request, '404.html', context=context)
+    return render(request, 'icardio.ai.html', context=context)
     
 
+
+@tools.monitor_me()
 def TestHTML(request):
 
     context = {'status': 0}
 
-    return render(request, 'test.html', context=context) 
+    return render(request, '404.html', context=context) 

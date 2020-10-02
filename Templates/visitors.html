@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<!-- head -->
+<head>    
+
+  <!-- django imports -->
+  <title> Daniel B Sokol - Engineer </title>
+  <link rel="shortcut icon" href="{% static 'favicon.ico' %}">
+  <link type="text/css" rel="stylesheet" href="{% static '/css/visitors.css' %}" />    
+ 
+  <!-- folium imports -->
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+  <script> /* global L_NO_TOUCH, L_DISABLE_3D */ 
+    L_NO_TOUCH = false;
+    L_DISABLE_3D = false;
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+  <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+  <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+  <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <style>
+    #folium_map_1 {
+      position: relative;
+      width: 100.0%;
+      height: 100.0%;
+      left: 0.0%;
+      top: 0.0%;
+    }
+  </style>
+
+  <!-- chart imports -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+        
+</head>
+
+
+<!-- body -->
+<body class='body'>
+
+  <div class='wrapper' >    
+    <div class='map--container'>
+      <div class="folium-map" id="folium_map_1" ></div>
+    </div>
+
+    <div class='counter--container'>
+      <div class='counter--inner'>  
+        Total hits:  
+        <br>
+        <p class='counter--value'> {{ totals.count }} </p>
+        Country with most hits:
+        <br>
+        <p class='counter--value'> {{ totals.country }} </p>
+      </div>
+    </div>
+
+    <div class='data--container'>
+      <canvas id="myChart"></canvas>
+    </div>
+  </div>
+  
+  <!-- footer -->
+  <footer class='footer'>
+    <div id='navbar' >
+      <a class='navbar--link' href='https://danielbsokol.engineer'> Home </a> 
+    </div>
+  </footer>
+  
+</body>
+ 
+  
+
+<script type='text/javascript'>
+    
+    var countries = {{countries|safe}};
+    var visitors = {{visitors|safe}};
+    var status = {{status|safe}};
+    
+</script>
+<script src="{% static '/js/visitors.js' %}"></script>

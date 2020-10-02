@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+<!-- head -->
+{% block head %}
+
+<script src="{% static '/js/tasks.js' %}"></script>
+<link type="text/css" rel="stylesheet" href="{% static '/css/tasks.css' %}" />
+
+{% endblock %}
+
+
+<!-- body -->
+{% block body %}
+
+<div id='tasks--container' class='container'>
+    
+  <!-- not started column -->    
+  <div id='tasks--column-1--outer' class='column-container'>
+    <div id='tasks--column-1--inner' class='column'>
+      <h2 id='tasks--column-1--title' class='column-title'> Not Started </h2>
+
+      <span id='task-1' class='task-dropzone' ondragover='OnDragOver(event);' ondrop='OnDrop(event);'>
+        <div class='task-wrapper' draggable='true' ondragstart='OnDragStart(event);'>
+          <div class='task-header'> Task 1 </div>
+          <div class='task-body'> format the task div </div>
+          <div class='task-footer'> options </div>
+        </div>
+      </span>
+    
+    </div>
+  </div>
+    
+  <!-- in progress column -->    
+  <div id='tasks--column-2--outer' class='column-container'>
+    <div id='tasks--column-2--inner' class='column'>
+      <h2 id='tasks--column-2--title' class='column-title'> In Progress </h2>
+      <span class='task-dropzone' ondragover='OnDragOver(event);' ondrop='OnDrop(event);'>
+      </span>
+
+    </div>
+  </div>
+  
+  <!-- completed column -->    
+  <div id='tasks--column-3--outer' class='column-container'>
+    <div id='tasks--column-3--inner' class='column' ondragover='OnDragOver(event);' ondrop='OnDrop(event);'>
+      <h2 id='tasks--column-3--title' class='column-title'> Completed </h2>
+
+    </div>
+  </div>
+    
+</div>
+
+
+<!-- footer -->
+<footer>
+  <div id='navbar' >
+    <a class='navbar--link' href='https://danielbsokol.engineer'> Home </a> 
+  </div>
+</footer>
+
+{% endblock %}
