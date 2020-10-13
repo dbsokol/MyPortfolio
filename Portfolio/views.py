@@ -13,6 +13,15 @@ def LoadPortfolio(request):
     
     
 @tools.monitor_me()    
+def RenderPortfolio2(request):
+    
+    context = {'status': 0}
+    
+    return render(request, 'portfolio/portfolio.html', context=context)
+    
+    
+    
+@tools.monitor_me()    
 def RenderICardioAi(request):
     
     context = {'status': 0}

@@ -84,10 +84,10 @@ function ExecuteTypwriter(activate) {
     }
     
     // set interval for typewriter function for header:
-    setInterval(function() {Typewriter(typewriter_inputs.projects__text_header);}, 2300/typewriter_inputs.projects__text_header.full_text.length); 
-    setInterval(function() {Typewriter(typewriter_inputs.artwork__text_header);}, 2400/typewriter_inputs.artwork__text_header.full_text.length);
-    setInterval(function() {Typewriter(typewriter_inputs.contact__text_header);}, 2100/typewriter_inputs.contact__text_header.full_text.length);
-    setInterval(function() {Typewriter(typewriter_inputs.projects__credentials_header);}, 2100/typewriter_inputs.projects__credentials_header.full_text.length);
+    // setInterval(function() {Typewriter(typewriter_inputs.projects__text_header);}, 2300/typewriter_inputs.projects__text_header.full_text.length); 
+    // setInterval(function() {Typewriter(typewriter_inputs.artwork__text_header);}, 2400/typewriter_inputs.artwork__text_header.full_text.length);
+    // setInterval(function() {Typewriter(typewriter_inputs.contact__text_header);}, 2100/typewriter_inputs.contact__text_header.full_text.length);
+    // setInterval(function() {Typewriter(typewriter_inputs.projects__credentials_header);}, 2100/typewriter_inputs.projects__credentials_header.full_text.length);
 } $(function(){ExecuteTypwriter(true)});
 
 

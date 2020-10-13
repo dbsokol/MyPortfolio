@@ -14,6 +14,9 @@ import json
 @tools.monitor_me()
 def Visitors(request):
     
+    for v in Visitor.objects.all():
+        if v.latitude is None or v.longitude is None: v.delete()
+    
     # get dataframe of all visitors:
     all_visitors = Visitor.objects.all().values()
     all_visitors = pd.DataFrame(all_visitors)

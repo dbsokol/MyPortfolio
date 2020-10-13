@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html class='parallax'>
+  <head>
+    
+    <title>Engineering</title>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'portfolio/css/portfolio.css' %}">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+    <script src="{% static 'portfolio/js/portfolio.js' %}"></script>
+  
+    {% block extraheaders %}
+    {% endblock %}
+    
+  </head>
+  
+  <body class="w3-light-grey">
+    
+    {% block body %}
+    {% endblock %}
+    
+  </body>
+</html>
